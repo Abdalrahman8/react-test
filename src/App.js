@@ -1,5 +1,4 @@
 import Topbar from "./components/Topbar/Topbar";
-import SinglePost from "./components/SinglePost/SinglePost";
 import Home from "./pages/Home/Home";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -8,7 +7,8 @@ import Login from "./pages/Login/Login";
 import Write from "./pages/Write/Write";
 import Settings from "./pages/Settings/Settings";
 import Single from "./pages/Single/Single";
-import Post from "./components/Post/Post";
+import About from "./pages/About/About";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
    const user = false;
@@ -45,6 +45,14 @@ function App() {
 
          <Routes>
             <Route path="/post/:postId" element={<Single />}></Route>
+         </Routes>
+
+         <Routes>
+            <Route path="/About" element={<About />}></Route>
+         </Routes>
+
+         <Routes>
+            <Route path="/Contact" element={<Contact />}></Route>
          </Routes>
       </Router>
    );
